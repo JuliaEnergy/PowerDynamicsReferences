@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Source bus -> transformer with ratio tap changer -> voltage dependent load.
+     The tap changer measures the transformer's terminal 2 voltage (the load bus). -->
+<dyn:dynamicModelsArchitecture xmlns:dyn="http://www.rte-france.com/dynawo">
+  <dyn:blackBoxModel id="Source" lib="InfiniteBusWithVariations" parFile="OLTCTransformer_2bus.par" parId="Source"/>
+  <dyn:blackBoxModel id="Tfo" lib="TransformerRatioTapChanger" parFile="OLTCTransformer_2bus.par" parId="Tfo"/>
+  <dyn:blackBoxModel id="TapChanger" lib="TapChangerAutomaton" parFile="OLTCTransformer_2bus.par" parId="TapChanger"/>
+  <dyn:blackBoxModel id="Load" lib="LoadAlphaBeta" parFile="OLTCTransformer_2bus.par" parId="Load"/>
+  <dyn:connect id1="Source" var1="infiniteBus_terminal" id2="Tfo" var2="transformer_terminal1"/>
+  <dyn:connect id1="Tfo" var1="transformer_terminal2" id2="Load" var2="load_terminal"/>
+  <dyn:connect id1="Tfo" var1="transformer_tap" id2="TapChanger" var2="tapChanger_tap"/>
+  <dyn:connect id1="Tfo" var1="transformer_U2Pu" id2="TapChanger" var2="tapChanger_UMonitored"/>
+</dyn:dynamicModelsArchitecture>

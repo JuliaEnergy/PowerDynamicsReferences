@@ -1,0 +1,7 @@
+dynawo_version = "1.7.0 (rev:-)"
+
+[lib_sha256]
+InfiniteBusWithVariations = "98303d58dba065bb8a76315496cd9a0c0b90f039cbefa98c9437dd7c4cdd6335"
+LoadAlphaBeta = "d79acad264e2a954e1c4000a0f076d35356d16fc8d40c1cf9be78be8c6ff98ef"
+TapChangerAutomaton = "04c3e9b90b8c76134d9ff2130306dd3a2ceada4e91076836ab597cd392d7f680"
+TransformerRatioTapChanger = "f324e8414e3b44cab965f8b5198a25742d2214e1e52fe02f7bb9bdd8288424fa"

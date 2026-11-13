@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curvesInput xmlns="http://www.rte-france.com/dynawo">
+  <curve model="Source" variable="infiniteBus_UPu"/>
+  <curve model="Source" variable="infiniteBus_PPu"/>
+  <curve model="Source" variable="infiniteBus_QPu"/>
+  <curve model="Tfo" variable="transformer_tap"/>
+  <curve model="Tfo" variable="transformer_ratioTfoPu"/>
+  <curve model="Tfo" variable="transformer_U1Pu"/>
+  <curve model="Tfo" variable="transformer_U2Pu"/>
+  <curve model="Tfo" variable="transformer_P1Pu"/>
+  <curve model="Tfo" variable="transformer_Q1Pu"/>
+  <curve model="TapChanger" variable="tapChanger_state"/>
+  <curve model="TapChanger" variable="tapChanger_tap"/>
+  <curve model="Load" variable="load_UPu"/>
+  <curve model="Load" variable="load_PPu"/>
+  <curve model="Load" variable="load_QPu"/>
+  <curve model="Load" variable="load_terminal_V_re"/>
+  <curve model="Load" variable="load_terminal_V_im"/>
+</curvesInput>

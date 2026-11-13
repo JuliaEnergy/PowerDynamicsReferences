@@ -1,0 +1,16 @@
+time;model;event
+9.999999998;TapChanger;Tap-changer : below minimum allowed value
+29.999999994;TapChanger;Tap position change (increment)
+39.999999992;TapChanger;Tap position change (increment)
+49.999999990;TapChanger;Tap position change (increment)
+59.999999988;TapChanger;Tap position change (increment)
+69.999999986;TapChanger;Tap position change (increment)
+79.999999984;TapChanger;Tap position change (increment)
+89.999999982;TapChanger;Tap position change (increment)
+119.999999976;TapChanger;Tap-changer : above maximum allowed value
+139.999999972;TapChanger;Tap position change (decrement)
+149.999999970;TapChanger;Tap position change (decrement)
+159.999999968;TapChanger;Tap position change (decrement)
+169.999999966;TapChanger;Tap position change (decrement)
+179.999999964;TapChanger;Tap position change (decrement)
+189.999999962;TapChanger;Tap position change (decrement)

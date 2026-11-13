@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- All values in pu on SnRef = 100 MVA and the bus nominal voltages.
+     The initial operating point (tap 9, source 1 pu, load 0.5 + j0.1 at the load bus) and the
+     start values below come from the 2-bus power flow. -->
+<parametersSet xmlns="http://www.rte-france.com/dynawo">
+  <!-- source: 1 pu, steps to 0.92 pu on [10 s, 120 s); frequency event disabled -->
+  <set id="Source">
+    <par type="DOUBLE" name="infiniteBus_U0Pu" value="1.0"/>
+    <par type="DOUBLE" name="infiniteBus_UPhase" value="0.0"/>
+    <par type="DOUBLE" name="infiniteBus_UEvtPu" value="0.92"/>
+    <par type="DOUBLE" name="infiniteBus_tUEvtStart" value="10"/>
+    <par type="DOUBLE" name="infiniteBus_tUEvtEnd" value="120"/>
+    <par type="DOUBLE" name="infiniteBus_omega0Pu" value="1.0"/>
+    <par type="DOUBLE" name="infiniteBus_omegaEvtPu" value="1.0"/>
+    <par type="DOUBLE" name="infiniteBus_tOmegaEvtStart" value="1000"/>
+    <par type="DOUBLE" name="infiniteBus_tOmegaEvtEnd" value="1000"/>
+  </set>
+  <!-- transformer: ratio = 0.92 + 0.01 * tap, taps 0..16, series X = 0.1 on the load side -->
+  <set id="Tfo">
+    <par type="INT" name="transformer_NbTap" value="17"/>
+    <par type="INT" name="transformer_Tap0" value="9"/>
+    <par type="DOUBLE" name="transformer_RatioTfoMinPu" value="0.92"/>
+    <par type="DOUBLE" name="transformer_RatioTfoMaxPu" value="1.08"/>
+    <par type="DOUBLE" name="transformer_AlphaTfo0" value="0.0"/>
+    <par type="DOUBLE" name="transformer_RPu" value="0.0"/>
+    <par type="DOUBLE" name="transformer_XPu" value="0.1"/>
+    <par type="DOUBLE" name="transformer_GPu" value="0.0"/>
+    <par type="DOUBLE" name="transformer_BPu" value="0.0"/>
+    <par type="DOUBLE" name="transformer_P10Pu" value="0.5"/>
+    <par type="DOUBLE" name="transformer_Q10Pu" value="0.126065333628"/>
+    <par type="DOUBLE" name="transformer_U10Pu" value="1.0"/>
+    <par type="DOUBLE" name="transformer_U1Phase0" value="0.0"/>
+  </set>
+  <!-- tap changer: band 1 +- 0.01 pu, first tap after 20 s, next taps every 10 s -->
+  <set id="TapChanger">
+    <par type="BOOL" name="tapChanger_regulating0" value="true"/>
+    <par type="DOUBLE" name="tapChanger_UTarget" value="1.0"/>
+    <par type="DOUBLE" name="tapChanger_UDeadBand" value="0.01"/>
+    <par type="DOUBLE" name="tapChanger_t1st" value="20"/>
+    <par type="DOUBLE" name="tapChanger_tNext" value="10"/>
+    <par type="INT" name="tapChanger_tapMin" value="0"/>
+    <par type="INT" name="tapChanger_tapMax" value="16"/>
+    <par type="INT" name="tapChanger_tap0" value="9"/>
+    <par type="DOUBLE" name="tapChanger_U0" value="0.998745946994"/>
+  </set>
+  <!-- load: P = P0 (U/U0)^1, Q = Q0 (U/U0)^2 -->
+  <set id="Load">
+    <par type="DOUBLE" name="load_alpha" value="1.0"/>
+    <par type="DOUBLE" name="load_beta" value="2.0"/>
+    <par type="DOUBLE" name="load_P0Pu" value="0.5"/>
+    <par type="DOUBLE" name="load_Q0Pu" value="0.1"/>
+    <par type="DOUBLE" name="load_U0Pu" value="0.998745946994"/>
+    <par type="DOUBLE" name="load_UPhase0" value="-0.0495874296444"/>
+  </set>
+  <!-- IDA order 2. The network is algebraic, so values are constant between events and
+       maxStep only sets the curve resolution. The tight algebraic tolerances (*Alg, *AlgJ)
+       make the row right after an event converged; with the defaults it is off by ~1e-5. -->
+  <set id="Solver">
+    <par type="INT" name="order" value="2"/>
+    <par type="DOUBLE" name="initStep" value="0.000001"/>
+    <par type="DOUBLE" name="minStep" value="0.000001"/>
+    <par type="DOUBLE" name="maxStep" value="0.01"/>
+    <par type="DOUBLE" name="absAccuracy" value="1e-8"/>
+    <par type="DOUBLE" name="relAccuracy" value="1e-8"/>
+    <par type="DOUBLE" name="fnormtolAlg" value="1e-10"/>
+    <par type="DOUBLE" name="scsteptolAlg" value="1e-10"/>
+    <par type="DOUBLE" name="fnormtolAlgJ" value="1e-10"/>
+    <par type="DOUBLE" name="scsteptolAlgJ" value="1e-10"/>
+  </set>
+</parametersSet>

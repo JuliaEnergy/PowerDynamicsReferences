@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dyn:jobs xmlns:dyn="http://www.rte-france.com/dynawo">
+  <dyn:job name="OLTCTransformer_2bus">
+    <dyn:solver lib="dynawo_SolverIDA" parFile="OLTCTransformer_2bus.par" parId="Solver"/>
+    <dyn:modeler compileDir="outputs/compilation">
+      <dyn:dynModels dydFile="OLTCTransformer_2bus.dyd"/>
+      <dyn:precompiledModels useStandardModels="true"/>
+      <dyn:modelicaModels useStandardModels="true"/>
+    </dyn:modeler>
+    <!-- precision: output decimals and Dynawo's internal event tolerance (default 1e-6) -->
+    <dyn:simulation startTime="0" stopTime="240" precision="1e-9"/>
+    <dyn:outputs directory="outputs">
+      <dyn:timeline exportMode="CSV"/>
+      <dyn:curves inputFile="OLTCTransformer_2bus.crv" exportMode="CSV"/>
+      <dyn:logs>
+        <dyn:appender tag="" file="dynawo.log" lvlFilter="INFO"/>
+      </dyn:logs>
+    </dyn:outputs>
+  </dyn:job>
+</dyn:jobs>
