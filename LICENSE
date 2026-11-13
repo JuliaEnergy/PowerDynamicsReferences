@@ -1,0 +1,38 @@
+License
+=======
+
+Unless otherwise stated, files in this repository are distributed under the MIT License below.
+Exceptions:
+
+- Files carrying an MPL header are distributed under the Mozilla Public License, v. 2.0
+  (https://mozilla.org/MPL/2.0/). They are inputs adapted from the Dynawo project.
+- RMSPowerSims.jl/ieee39_load_step/ieee39.json is taken from RMSPowerSims.jl
+  (https://github.com/tphilpott2/RMSPowerSims.jl), MIT License,
+  Copyright (c) 2024 tom philpott <tsp266@uowmail.edu.au> and contributors.
+- The files in tr19/ apart from tr19/README.md and the contents of tr19/printed/ are published by
+  the authors of IEEE PES-TR19 and redistributed as they are. tr19/README.md names their sources.
+  They are not covered by this license.
+
+
+MIT License
+===========
+
+Copyright (c) 2026 Hans Würfel <git@wuerfel.io> and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

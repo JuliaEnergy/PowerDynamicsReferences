@@ -8,6 +8,7 @@ this repository and download it; nobody who only uses PowerDynamics needs it.
 | --- | --- | --- |
 | `openipsl/` | OpenIPSL models, one SMIB case per model | `ref_data_gen.sh` in each case, OpenModelica |
 | `dynawo/` | Dynawo cases | `run_case.py`, see `dynawo/README.md` |
+| `RMSPowerSims.jl/` | IEEE 39-bus load step from RMSPowerSims.jl | `run_case.jl` in the case, see `RMSPowerSims.jl/README.md` |
 | `tr19/` | Nordic test system of IEEE PES-TR19 | published by the report authors, see `tr19/README.md` |
 | `external/` | PowerFactory results | exported from a private repository, see below |
 

@@ -1,0 +1,12 @@
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+RMSPowerSims = "0701f214-ab35-4ae9-9ce0-f2d0adfb6d4c"
+
+[sources]
+RMSPowerSims = {url = "https://github.com/tphilpott2/RMSPowerSims.jl", rev = "376f25a963852913d83aef95d9ec0fb0a86115b2"}
+
+[compat]
+# RMSPowerSims has no bounds and expects JSON.parse to return a Dict
+JSON = "0.21"
