@@ -1,7 +1,9 @@
 # PowerDynamicsReferences
 
+[![check-export](https://github.com/JuliaEnergy/PowerDynamicsReferences/actions/workflows/check-export.yml/badge.svg?branch=main)](https://github.com/JuliaEnergy/PowerDynamicsReferences/actions/workflows/check-export.yml)
+
 Reference simulations for the validation tests of
-[PowerDynamics.jl](https://github.com/JuliaEnergy/PowerDynamics.jl). The tests name a tag of
+[PowerDynamics.jl](https://github.com/JuliaEnergy/PowerDynamics.jl). The tests name a commit of
 this repository and download it; nobody who only uses PowerDynamics needs it.
 
 | Folder | What | How it is produced |
@@ -19,5 +21,5 @@ Everything except `external/` is edited here directly, and pull requests are wel
 The PowerFactory projects cannot be published, so their results come from an export out of a
 private repository. The export cuts each result down to the signals the tests read, and writes
 `external/EXPORT.toml` with the private commit it came from and a checksum of every file. A check
-on GitHub only accepts an export from a committed and pushed state whose files match those
-checksums. Nobody edits `external/` by hand.
+on GitHub (`check-export`, runs locally too) only accepts an export from a committed and pushed
+state whose files match those checksums. Nobody edits `external/` by hand.
